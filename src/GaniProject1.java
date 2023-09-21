@@ -20,10 +20,10 @@ public class GaniProject1 {
         double tip = bill * percent;
         tip = Math.round(tip * 100.0) / 100.0;
         System.out.println("Total bill before tip: $" + bill);
-        System.out.println("Total percentage: " + ((int) percent * 100) + "%");
+        System.out.println("Total percentage: " + (percent * 100) + "%");
         System.out.println("Total tip: $" + (tip));
-        System.out.println("Total bill with tip: $" + (Math.round(((tip + bill) * 100) / 100)));
-        System.out.println("Tip per person: $" + (tip / party));
+        System.out.println("Total bill with tip: $" + (Math.round((tip + bill) * 100.0) / 100.0));
+        System.out.println("Tip per person: $" + (Math.round((tip / party) / 100) / 100.0));
         System.out.println("Total cost per person: $" + ((bill + tip) / party));
     }
 }
