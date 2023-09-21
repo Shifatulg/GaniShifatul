@@ -6,17 +6,21 @@ public class GaniProject1 {
         System.out.print("How many people are in your group: ");
         int party = scan.nextInt();
         System.out.print("What's the tip percentage? (0-100): ");
-        int percent = scan.nextInt();
+        double percent = scan.nextDouble();
+        percent /= 100;
         double cost = 0;
         double bill = 0;
         while (cost!=-1) {
             System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (-1 to end): ");
             cost = scan.nextDouble();
-            bill += cost;
+            if (cost >= 0) {
+                bill += cost;
+            }
         }
         double tip = bill * percent;
+        tip = Math.round(tip * 100.0) / 100.0;
         System.out.println("Total bill before tip: $" + bill);
-        System.out.println("Total percentage: $" + percent + "%");
+        System.out.println("Total percentage: " + percent + "%");
         System.out.println("Total tip: $" + (tip));
         System.out.println("Total bill with tip: $" + (tip + bill));
         System.out.println("Tip per person: $" + (tip / party));
