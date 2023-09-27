@@ -18,7 +18,7 @@ public class GaniProject1 {
             }
         }
         double tip = bill * percent;
-        tip = Math.round(tip * 100.0) / 100.0;
+        tip = NumRound(tip, 2);
         System.out.println("Total bill before tip: $" + bill);
         System.out.println("Total percentage: " + (percent * 100) + "%");
         System.out.println("Total tip: $" + (tip));
