@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class GaniProject1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        Rounding round = new Rounding();
         System.out.println("Welcome to the tip calculator!");
         System.out.print("How many people are in your group: ");
         int party = scan.nextInt();
@@ -18,7 +19,7 @@ public class GaniProject1 {
             }
         }
         double tip = bill * percent;
-        tip = NumRound(tip, 2);
+        tip = round.NumRound(tip, 2);
         System.out.println("Total bill before tip: $" + bill);
         System.out.println("Total percentage: " + (percent * 100) + "%");
         System.out.println("Total tip: $" + (tip));
