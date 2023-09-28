@@ -23,8 +23,8 @@ public class GaniProject1 {
         System.out.println("Total bill before tip: $" + bill);
         System.out.println("Total percentage: " + (percent * 100) + "%");
         System.out.println("Total tip: $" + (tip));
-        System.out.println("Total bill with tip: $" + (Math.round((tip + bill) * 100.0) / 100.0));
-        System.out.println("Tip per person: $" + (Math.round((tip / party) / 100) / 100.0));
-        System.out.println("Total cost per person: $" + ((bill + tip) / party));
+        System.out.println("Total bill with tip: $" + (round.NumRound((tip + bill), 2)));
+        System.out.println("Tip per person: $" + (round.NumRound((tip / party), 2)));
+        System.out.println("Total cost per person: $" + (round.NumRound((bill + tip), 2)));
     }
 }
