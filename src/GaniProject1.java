@@ -19,18 +19,17 @@ public class GaniProject1 {
             }
         }
         double tip = bill * percent;
+        double discount = 1;
         if ((tip + bill ) > 50) {
             System.out.println("Meals over 50 dollars come with a free voucher of 10% off: ");
-            tip *= .9;
-            bill *= .9;
+            discount = .9;
         }
         tip = round.NumRound(tip, 2);
         bill = round.NumRound(bill, 2);
-        System.out.println("Total bill before tip: $" + bill);
-        System.out.println("Total percentage: " + (percent * 100) + "%");
-        System.out.println("Total tip: $" + (tip));
-        System.out.println("Total bill with tip: $" + (round.NumRound((tip + bill), 2)));
-        System.out.println("Tip per person: $" + (round.NumRound((tip / party), 2)));
-        System.out.println("Total cost per person: $" + (round.NumRound((bill + tip) / party, 2)));
+        System.out.print("Bill before discount: ");
+        round.receipt(tip, bill, party, percent, discount);
+        System.out.println();
+        System.out.println("Bill after discount: ");
+        round.receipt(tip, bill, party, percent, discount);
     }
 }

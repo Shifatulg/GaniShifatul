@@ -12,4 +12,14 @@ public class Rounding {
         number = Math.round(number * (double) Math.pow(10, decimal)) / (double) Math.pow(10, decimal);
         return number;
     }
+    public void receipt(double tip, double bill, int party, double percent, double discount) {
+        System.out.println();
+        System.out.println("Total bill before tip: $" + NumRound((discount * bill), 2));
+        System.out.println("Total percentage: " + (percent * 100) + "%");
+        System.out.println("Total tip: $" + (discount * tip * discount));
+        System.out.println("Total bill with tip: $" + (NumRound((discount * (tip + bill)), 2)));
+        System.out.println("Tip per person: $" + (NumRound((discount * (tip / party)), 2)));
+        System.out.println("Total cost per person: $" + (NumRound(discount * ((bill + tip) / party), 2)));
+    }
+
 }
