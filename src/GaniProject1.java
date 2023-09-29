@@ -27,7 +27,7 @@ public class GaniProject1 {
         tip = round.NumRound(tip, 2);
         bill = round.NumRound(bill, 2);
         System.out.print("Bill before discount: ");
-        round.receipt(tip, bill, party, percent, discount);
+        round.receipt(tip, bill, party, percent, 1);
         System.out.println();
         System.out.println("Bill after discount: ");
         round.receipt(tip, bill, party, percent, discount);
